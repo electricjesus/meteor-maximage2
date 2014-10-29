@@ -1,0 +1,3 @@
+[submodule "lib/maximage"]
+	path = lib/maximage
+	url = https://github.com/akv2/MaxImage.git
