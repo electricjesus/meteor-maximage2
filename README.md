@@ -7,4 +7,4 @@ Meteor Maximage
 Installation
 ------------
 
-    meteor add electricjesus:maximage
+    meteor add electricjesus:maximage2
