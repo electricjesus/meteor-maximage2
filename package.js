@@ -7,13 +7,18 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.2');
-  api.use('jquery');
-  api.addFiles('electricjesus:maximage2.js');
+  api.use('jquery','client');
+  api.add_files([
+    'lib/maximage/lib/js/jquery.cycle.all.js',    
+    'lib/maximage/lib/js/jquery.maximage.js',    
+    'lib/maximage/lib/css/jquery.maximage.css'
+  ],'client');
+  api.addFiles('electricjesus:maximage2.js', 'client');
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('jquery');
-  api.use('electricjesus:maximage2');
-  api.addFiles('electricjesus:maximage2-tests.js');
+  api.use('electricjesus:maximage2','client');
+  api.addFiles('electricjesus:maximage2-tests.js','client');
 });
